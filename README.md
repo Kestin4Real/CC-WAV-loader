@@ -6,7 +6,7 @@ local api_WAV = require('WAVLib') --Load the API
 local speaker = peripheral.find('speaker') --Prep the speaker
 local audio = api_WAV.Load('Ievan Polkka.wav') --Load the audio data
 
-local samples = 0 --Store how meny samples have played (Another name could be offset)
+local samples = 0 --Store how many samples have played (Another name could be offset)
 speaker.stop() --Stop any sounds playing by the speaker (If any)
 while samples < audio.samples do --Loop true all the audio
     local buffer = {} --Prep the buffer
@@ -16,7 +16,7 @@ while samples < audio.samples do --Loop true all the audio
     samples = samples + 131072 --Add 131072 to the already "played" samples count
 
     while not speaker.playAudio(buffer) do --Try to play buffered audio
-        os.pullEvent("speaker_audio_empty") --Wait into speaker has finished playing audio
+        os.pullEvent("speaker_audio_empty") --Wait until speaker has finished playing audio
     end
 end
 ```
