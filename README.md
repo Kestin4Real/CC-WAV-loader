@@ -1,8 +1,8 @@
-The WAVAPI.lua is for loading WAV files for use in ComputerCraft!
+The WAVLib.lua is for loading WAV files for use in ComputerCraft!
 Here is a quick example script:
 
 ```
-local api_WAV = require('WAVAPI') --Load the API
+local api_WAV = require('WAVLib') --Load the API
 local speaker = peripheral.find('speaker') --Prep the speaker
 local audio = api_WAV.Load('Ievan Polkka.wav') --Load the audio data
 
