@@ -21,4 +21,4 @@ while samples < audio.samples do --Loop true all the audio
 end
 ```
 New to GIT so any help is welcome!
-Same goes for the API!
+Same goes for the library!
